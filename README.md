@@ -59,8 +59,10 @@ If you use this code in academic work, please cite:
 ## Contact
 
 Ying Zeng  
+
 School of Economics and Wang Yanan Institute for Studies in Economics (WISE)
 Xiamen University
+
 Email: <zengying17@gmail.com>
 
 ## Related repository
