@@ -30,6 +30,8 @@ source("/path/to/ate_pct-r/ate_pct.R")
 ## Quick start
 
 ```r
+library("sandwich")
+
 # Load functions
 source("ate_pct.R")
 
@@ -44,6 +46,7 @@ out <- ate_pct(reg_res, c("gr1","gr2","gr3"), VC_model=VChet)
 print(out)
 summary(out)
 ```
+See `ate_pct.R` for additional worked examples and usage notes (included in the script comments).
 
 ## Notes on sampling and variance output
 
@@ -61,6 +64,7 @@ If you use this code in academic work, please cite:
 Ying Zeng  
 
 School of Economics and Wang Yanan Institute for Studies in Economics (WISE)
+
 Xiamen University
 
 Email: <zengying17@gmail.com>
