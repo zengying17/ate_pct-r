@@ -1,9 +1,10 @@
 Package: atepct
-Title: What the Package Does (One Line, Title Case)
+Title: Average Treatment Effect in Percentage Points
 Version: 0.0.0.9000
 Authors@R: 
-    person("Ying", "Zeng", , "zengying187@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Ying", "Zeng", email = "zengying17@gmail.com", role = c("aut", "cre"))
+Description: Provides estimation and inference for average treatment effects in
+    percentage points under subgroup heterogeneity, following Zeng (2026).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -11,6 +12,9 @@ RoxygenNote: 7.3.3
 Depends: 
     R (>= 3.5)
 LazyData: true
-Imports: 
-    Matrix,
+Imports:
+    Matrix
+Suggests:
     sandwich
+URL: https://github.com/zengying17/ate_pct-r
+BugReports: https://github.com/zengying17/ate_pct-r/issues
