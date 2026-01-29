@@ -14,18 +14,11 @@ This repository provides:
 - `ate_pct_example.Rda` — example dataset
 
 ## Installation
-### Option A: Install from GitHub
 ```
 install.packages("remotes")
 remotes::install_github("zengying17/ate_pct-r")
 ```
 
-### Option B: Source directly from GitHub (download + source)
-1. Download or clone this repository.
-2. In R:
-   ```r
-   source("ate_pct.R")
-   ```
 
 ## Quick start
 
