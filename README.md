@@ -56,6 +56,14 @@ See the help document for additional worked examples and usage notes.
 - Subsetting should be handled when fitting the model on the desired sample (e.g., via `subset=` in `lm()`), because `ate_pct()` uses the fitted model’s coefficients and `vcov()`.
 - `vcov(out)` returns a 3×3 **diagonal** matrix containing delta-method variances for `(taubar, rho_a, rho_b)`; off-diagonal covariances are ignored and set to 0 by design.
 
+## Included example data
+
+The package includes ate_pct_example for replicable examples:
+
+```
+data(ate_pct_example, package = "atepct")
+```
+
 ## Citation
 
 If you use this code in academic work, please cite:
