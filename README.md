@@ -2,7 +2,7 @@
 
 R implementation of **ATE in percentage points (ATE-pct)** under subgroup heterogeneity, as developed in:
 
-> Ying Zeng, *“Estimation and Inference on Average Treatment Effect in Percentage Points”*.
+> Ying Zeng, *“Estimation and Inference on Average Treatment Effect in Percentage Points under Heterogeneity”*.
 
 This repository provides:
 - `ate_pct()` — post-estimation function for `lm()`-like objects (requires `coef()` and `vcov()` methods)
@@ -62,7 +62,7 @@ data(ate_pct_example, package = "atepct")
 
 If you use this code in academic work, please cite:
 
-- Zeng, Ying. *Estimation and Inference on Average Treatment Effect in Percentage Points.*
+- Zeng, Ying. *Estimation and Inference on Average Treatment Effect in Percentage Points under Heterogeneity.*
 
 ## Contact
 
