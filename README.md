@@ -14,39 +14,42 @@ This repository provides:
 - `ate_pct_example.Rda` — example dataset
 
 ## Installation
+### Option A: Install from GitHub
+```
+install.packages("remotes")
+remotes::install_github("zengying17/ate_pct-r")
+```
 
-### Option A: Source directly from GitHub (download + source)
+### Option B: Source directly from GitHub (download + source)
 1. Download or clone this repository.
 2. In R:
    ```r
    source("ate_pct.R")
    ```
 
-### Option B: Use `source()` from a local path
-```r
-source("/path/to/ate_pct-r/ate_pct.R")
-```
-
 ## Quick start
 
 ```r
 library("sandwich")
-
-# Load functions
-source("ate_pct.R")
-
+library("atepct")
 # Load example data
-load("ate_pct_example.Rda")
+
+data(ate_pct_example, package = "atepct")
 
 # Example regression (adjust variable names to your dataset)
-reg_res <- lm(lny~x+gr1+gr2+gr3,data=df)
-VChet <- vcovHC(reg_res, type = "HC1")
-# Post-estimation
-out <- ate_pct(reg_res, c("gr1","gr2","gr3"), VC_model=VChet)
-print(out)
-summary(out)
-```
-See `ate_pct.R` for additional worked examples and usage notes (included in the script comments).
+reg_res <- lm(lny~x+gr1+gr2+gr3,data=ate_pct_example)
+# Default: uses vcov(reg_res)
+out1 <- ate_pct(reg_res, c("gr1","gr2","gr3"))
+out1
+summary(out1)
+
+# Optional: heteroskedasticity-robust vcov via sandwich
+if (requireNamespace("sandwich", quietly = TRUE)) {
+  VChet <- sandwich::vcovHC(reg_res, type = "HC1")
+  out1_robust <- ate_pct(reg_res, c("gr1","gr2","gr3"), VC_model = VChet)
+  summary(out1_robust)
+}
+See the help document for additional worked examples and usage notes.
 
 ## Notes on sampling and variance output
 
