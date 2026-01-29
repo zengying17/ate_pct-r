@@ -49,6 +49,7 @@ if (requireNamespace("sandwich", quietly = TRUE)) {
   out1_robust <- ate_pct(reg_res, c("gr1","gr2","gr3"), VC_model = VChet)
   summary(out1_robust)
 }
+```
 See the help document for additional worked examples and usage notes.
 
 ## Notes on sampling and variance output
@@ -60,7 +61,7 @@ See the help document for additional worked examples and usage notes.
 
 The package includes ate_pct_example for replicable examples:
 
-```
+```r
 data(ate_pct_example, package = "atepct")
 ```
 
